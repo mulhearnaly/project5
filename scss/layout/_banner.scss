@@ -1,0 +1,41 @@
+
+.banner {
+  background-color: $headerFooter;
+  text-align: center;
+  padding-bottom: 1em;
+  @extend %borders;
+  
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  } // Close media
+  
+  p {
+    width: 90%;
+    @extend %autoMargin;
+  
+    @include tablet {
+      max-width: 55%;
+      @include margins(inherit, inherit, 3%, 2%);
+      float: left;
+      font-size: $base * 1.1;
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: $base * 1.3;
+    }
+  }// Close p
+  
+  img {
+    width: 70%;
+    @include margins(15px, 5px, auto);
+    @extend %borders;
+    @include tablet {
+      max-width: 37%;
+      @include margins(0, 0, 0, 3%);
+      float: right;
+    }
+    
+  } // Close img
+}// Close .banner

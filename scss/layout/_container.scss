@@ -1,0 +1,30 @@
+.container
+ {
+  @extend %autoMargin;
+  max-width: 100%;
+  background-color: $background;
+}
+
+.portfolio {
+    max-width: 90%;
+    @include margins(5px, $left: auto);
+    
+    @include tablet {
+      @include flex;
+  }
+    @include desktop {
+      @include flex;
+  }  
+} //Close .portfolio
+
+
+.port-item {
+  
+  @include tablet {
+    flex-basis: 45%;
+  }// close media 
+
+  @include desktop {
+    flex-basis: 30%;
+  } // close media 
+} //close .port-item

@@ -1,0 +1,30 @@
+@mixin margins($top, $bottom: $top, $left: inherit, $right: $left) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  margin-right: $right;
+}
+
+// Media Queries
+      
+@mixin tablet {
+  @media (min-width: #{$brkNarrow}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$brkWide}) {
+    @content;
+  }
+}
+
+//Flex
+
+@mixin flex ($justify: space-between){
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}

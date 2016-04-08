@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFont;
+  color: $text;
+}
+
+p {
+  font-size: $base * .85;
+  @include margins(-0.25em, 2em);
+  text-align: center;
+  
+  @include desktop {
+    font-size: $base;
+  }
+}
+
+h1, 
+h2, 
+h3,
+a {
+  color: $text;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headerFont;
+}
+
+h1, 
+h2 {
+  @include margins(1em);
+  font-size: $base * 1.4;
+  
+  @include tablet {
+    font-size: $base * 1.8;
+  }
+  
+  @include desktop {
+    font-size: $base * 2.5;
+  }
+} //closes h1 and h2
+
+
+h3 {
+  @include margins(.5em);
+  font-size: $base * 1.1;
+  
+  @include tablet {
+    font-size: $base * 1.4;
+  }
+  
+  @include desktop {
+    font-size: $base * 1.8;
+  }
+}
+
+a {
+    text-decoration: none;
+    
+    &:hover {
+      color: $hover;
+    }
+}
+
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
